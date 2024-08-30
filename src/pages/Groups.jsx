@@ -40,7 +40,7 @@ function Groups() {
 
   const onHandleConfirm = () => {
     axios
-      .post(`http://localhost:3100/api/v1/user/deletegroup/${groupId}`)
+      .post(`https://emailtool-be-1.onrender.com/api/v1/user/deletegroup/${groupId}`)
       .then((res) => {
         setIsOpen(false);
         toast.success("Successfully deleted group", {
@@ -64,7 +64,7 @@ function Groups() {
       headers: { Authorization: token },
     };
     axios
-      .get("http://localhost:3100/api/v1/user/viewgroups", config)
+      .get("https://emailtool-be-1.onrender.com/api/v1/user/viewgroups", config)
       .then((res) => {
         setGroups(res.data.groups);
       })

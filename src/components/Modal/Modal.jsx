@@ -42,7 +42,7 @@ const GroupModal = ({ handleModal }) => {
     setIsLoading(true);
     axios
       .post(
-        `http://localhost:3100/api/v1/user/addgroup`,
+        `https://emailtool-be-1.onrender.com/api/v1/user/addgroup`,
         {
           name: name,
           emails: validEmails,

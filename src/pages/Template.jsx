@@ -22,7 +22,7 @@ function Templates() {
       headers: { Authorization: token },
     };
     axios
-      .get("http://localhost:3100/api/v1/user/viewtemplates", config)
+      .get("https://emailtool-be-1.onrender.com/api/v1/user/viewtemplates", config)
       .then((res) => {
         setTemplates(res.data.templates);
       })
@@ -53,7 +53,7 @@ function Templates() {
 
   const onHandleConfirm = () => {
     axios
-      .post(`http://localhost:3100/api/v1/user/deletetemplate/${templateId}`)
+      .post(`https://emailtool-be-1.onrender.com/api/v1/user/deletetemplate/${templateId}`)
       .then((res) => {
         console.log("Successfully deleted");
         setIsOpen(false);

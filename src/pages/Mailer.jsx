@@ -22,7 +22,7 @@ function Send() {
       headers: { Authorization: token },
     };
     axios
-      .get("http://localhost:3100/api/v1/user/viewgroups", config)
+      .get("https://emailtool-be-1.onrender.com/api/v1/user/viewgroups", config)
       .then((res) => {
         setGroups(res.data.groups);
       })
@@ -63,7 +63,7 @@ function Send() {
       const config = { headers: { Authorization: token } };
 
       const response = await axios.post(
-        "http://localhost:3100/api/v1/user/sendmail",
+        "https://emailtool-be-1.onrender.com/api/v1/user/sendmail",
         payload,
         config
       );

@@ -3,7 +3,7 @@ import axios from "axios";
 export const signup = (user) => {
   const { firstName, lastName, email, password } = user;
   return axios
-    .post("http://localhost:3100/api/v1/register", {
+    .post("https://emailtool-be-1.onrender.com/api/v1/register", {
       firstName,
       lastName,
       email,
@@ -22,7 +22,7 @@ export const signin = async (email, password) => {
   try {
     // Make the POST request to the login endpoint
     const response = await axios.post(
-      "http://localhost:3100/api/v1/login",
+      "https://emailtool-be-1.onrender.com/api/v1/login",
       { email, password },
       { headers: { 'Content-Type': 'application/json' } } 
     );

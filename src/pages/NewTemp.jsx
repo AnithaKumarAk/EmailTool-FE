@@ -20,7 +20,7 @@ function NewTemp() {
     };
     axios
       .post(
-        "http://localhost:3100/api/v1/user/newtemplate",
+        "https://emailtool-be-1.onrender.com/api/v1/user/newtemplate",
         {
           content: code,
           name: name,
